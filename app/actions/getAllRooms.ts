@@ -1,7 +1,6 @@
 'use server';
 
 import { createAdminClient } from '@/config/appwrite';
-import { revalidatePath } from 'next/cache';
 
 async function getAllRooms() {
   try {
@@ -14,9 +13,6 @@ async function getAllRooms() {
       databaseId,
       collectionId
     );
-
-    // Revalidate the path
-    // revalidatePath('/');
 
     return rooms;
   } catch (error) {
