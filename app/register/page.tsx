@@ -1,3 +1,5 @@
+import Link from 'next/link';
+
 const RegisterPage = () => {
   return (
     <div className="flex items-center justify-center">
@@ -81,9 +83,9 @@ const RegisterPage = () => {
 
             <p>
               Have an account?
-              <a href="login.html" className="text-blue-500">
+              <Link href="/login" className="text-blue-500">
                 Login
-              </a>
+              </Link>
             </p>
           </div>
         </form>
