@@ -7,6 +7,12 @@ import { useActionState, useEffect } from 'react';
 const LoginPage = () => {
   const [state, formAction] = useActionState(createSession, {});
 
+  useEffect(() => {
+    if (state.error) {
+      console.log(state.error);
+    }
+  }, [state]);
+
   return (
     <div className="flex items-center justify-center">
       <div className="bg-white shadow-lg rounded-lg p-6 w-full max-w-sm mt-20">
